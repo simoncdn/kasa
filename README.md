@@ -12,10 +12,13 @@ You can see the result on vercel : https://kasa-eta.vercel.app/
 ## Depencies
 
 In this project I use : 
-  - React-router
+
   - React.js
+  - TypeScript
+  - React-router
   - Styled-components
   - Context
+
 
 You can clone this repository with this command: 
 =>  https://github.com/simoncdn/kasa.git
