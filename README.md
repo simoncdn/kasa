@@ -9,7 +9,7 @@ I used reausable component and trained me to write code cleanest as I could.
 
 You can see the result on vercel : https://kasa-eta.vercel.app/
 
-## Depencies
+## Dependencies
 
 In this project I use : 
 
