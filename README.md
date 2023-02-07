@@ -1,11 +1,11 @@
 # KASA
 
 Kasa is a web application of an accomodation rental platform C2C.
-It is just a prototype so you can't do a fake booking and you can't see the price. 
+It's a prototype so you can't do a fake booking and you can't see the price. 
 But I'm working on a v2, more fonctionnal.
 
 In this project developted in a formation, I had the chance to work with a designer to develop my skills.
-I used reausable component and trained me to write code cleanest as I could.
+I used reausable components and trained me to write code cleanest as I could.
 
 You can see the result on vercel : https://kasa-eta.vercel.app/
 
@@ -20,10 +20,10 @@ In this project I use :
   - Context
 
 
-You can clone this repository with this command: 
+Clone this repository with this command: 
 =>  https://github.com/simoncdn/kasa.git
 
-and install the depencies whith : 
+Install the depencies with : 
 => npm install (nameofthedependence)
 
 and start the localhost : 
