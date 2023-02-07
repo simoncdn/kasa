@@ -30,4 +30,4 @@ and start the localhost :
 => npm start
 
 
-I hope you like it, I'm open to commentaries.
+I hope you like it, I'm open to feedbacks and commentaries.
