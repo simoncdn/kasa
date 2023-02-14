@@ -92,10 +92,37 @@ const LodgingInfoTopStyled = styled.div`
       width: 15px;
       margin-left: 0px;
     }
-    .star-red {
+    .star-white {
       width: 15px;
       margin-left: 0px;
       margin-right: 5px;
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .location-and-tags {
+      h2 {
+        font-size: 20px;
+      }
+      .tags-container ul {
+        li {
+          font-size: 12px;
+          border-radius: 5px;
+          padding: 5px 8px;
+        }
+      }
+    }
+    .host-and-rating {
+      .host {
+        p {
+          font-size: 14px;
+        }
+        img {
+          width: 40px;
+        }
+      }
+    }
+    .star-grey {
+      width: 10px;
     }
   }
 `;

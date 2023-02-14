@@ -137,18 +137,7 @@ const GalleryStyled = styled.div`
     }
   }
 
-  /* @media screen and (max-width: 768px) {
-    height: 255px;
-    margin: 20px 0px;
-    .btn-slide {
-      width: 30px;
-      height: 30px;
-    }
-    .prev {
-      left: 10px;
-    }
-    .next {
-      right: 10px;
-    }
-  } */
+  @media screen and (max-width: 768px) {
+    height: 60%;
+  }
 `;

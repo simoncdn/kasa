@@ -106,6 +106,25 @@ const BookingStyled = styled.form`
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 560px) {
+    width: 90%;
+    height: 250px;
+    span {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .booking-input {
+      input {
+        height: 30px;
+      }
+      button {
+        height: 30px;
+      }
+    }
   }
 `;

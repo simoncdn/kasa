@@ -98,7 +98,7 @@ const LodgingContentStyled = styled.div`
   @media screen and (max-width: 1024px) {
     .info-and-booking {
       grid-template-columns: 1fr;
-      justify-items: start;
+      justify-items: center;
     }
     h1 {
       font-size: 30px;
@@ -106,5 +106,9 @@ const LodgingContentStyled = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin-top: 80px;
+    .home-button {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;

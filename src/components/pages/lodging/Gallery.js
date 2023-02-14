@@ -74,4 +74,9 @@ const MosaiqueStyled = styled.div`
       grid-row: 2/3;
     }
   }
+  @media screen and (max-width: 560px) {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(1, 100%);
+    height: 200px;
+  }
 `;

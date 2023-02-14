@@ -63,6 +63,15 @@ const LodgingInfoBottomStyled = styled.div`
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 560px) {
+    .equipments,
+    .description {
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
   }
 `;
