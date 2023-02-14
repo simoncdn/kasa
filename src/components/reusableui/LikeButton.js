@@ -55,7 +55,6 @@ const LikeButtonStyled = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 400ms ease;
     &:active {
       scale: 1.1;
       transition: all 400ms ease;
