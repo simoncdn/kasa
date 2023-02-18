@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 import { BiMailSend } from "react-icons/bi";
+import SubmitBtn from "../../reusableui/SubmitBtn";
 
 export default function Booking({ price }) {
   const [isUserEmail, setIsUserEmail] = useState("");
@@ -45,7 +46,7 @@ export default function Booking({ price }) {
           onChange={handleChangeEmail}
           required
         />
-        <button>Réserver</button>
+        <SubmitBtn label="Réserver" />
       </div>
     </BookingStyled>
   );
@@ -79,15 +80,6 @@ const BookingStyled = styled.form`
       border: 1px solid black;
       margin-bottom: 15px;
       font-size: 18px;
-    }
-    button {
-      border: none;
-      background-color: #ff6060;
-      height: 50px;
-      border-radius: 5px;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
     }
   }
   @media screen and (max-width: 1024px) {
