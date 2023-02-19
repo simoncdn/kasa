@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCFNpYL7cXf8cgQ0MlECZH9uvvjZ_gfEUE",
+  authDomain: "kasa-6ccf4.firebaseapp.com",
+  projectId: " kasa-6ccf4",
+  storageBucket: "kasa-6ccf4.appspot.com",
+  messagingSenderId: "93197253548",
+  appId: "1:93197253548:web:dc20ccc07173f22695d809",
 };
 
 // Initialize Firebase
