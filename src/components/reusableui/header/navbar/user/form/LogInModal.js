@@ -1,50 +1,38 @@
-import { useContext } from "react";
 import { RxCross1 } from "react-icons/rx";
 import styled from "styled-components";
-import GlobalContext from "../../../../context/GlobalContext";
+import SignInForm from "./SignInForm";
+import SignUpForm from "./SignUpForm";
 
-export default function LoginPanel({ onClick, handleSubmit }) {
-  const { username, setUsername, setIsLoginPanel, isLoginPanel } =
-    useContext(GlobalContext);
-
-  const handleChange = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const closeLoginPanel = () => {
-    setIsLoginPanel(!isLoginPanel);
+export default function LogInModal({
+  userPillAction,
+  signUp,
+  signIn,
+  setIsLogInModal,
+}) {
+  const closeLogInModal = () => {
+    setIsLogInModal(false);
   };
 
   return (
     <LoginPanelStyled>
-      <div className="overlay"></div>
+      <div className="overlay" onClick={closeLogInModal}></div>
       <div className="modal-content">
         <div className="modal-content-title">
-          <h2>Login ou inscription</h2>
-
-          <button onClick={closeLoginPanel} className="button">
+          {userPillAction === "signIn" ? (
+            <h2>Connexion</h2>
+          ) : (
+            <h2>Inscription</h2>
+          )}
+          <button onClick={closeLogInModal} className="button">
             <RxCross1 className="icon" />
           </button>
         </div>
-        <form
-          className="modal-content-body"
-          action="submit"
-          onSubmit={handleSubmit}
-        >
-          <h3>Bienvenue sur Kasa</h3>
-          <input
-            htmlFor="username"
-            placeholder="Veuillez entrer votre nom"
-            type="text"
-            onChange={handleChange}
-            value={username}
-            required
-            pattern="[a-zA-Z0-9]+"
-            minLength="2"
-            maxLength="10"
-          />
-          <button>Continuer</button>
-        </form>
+
+        {userPillAction === "signIn" ? (
+          <SignInForm signIn={signIn} setIsLogInModal={setIsLogInModal} />
+        ) : (
+          <SignUpForm signUp={signUp} setIsLogInModal={setIsLogInModal} />
+        )}
       </div>
     </LoginPanelStyled>
   );
@@ -71,11 +59,10 @@ const LoginPanelStyled = styled.div`
   }
   .modal-content {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    width: 400px;
+    width: 60%;
     height: auto;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
     border-radius: 15px;
@@ -120,41 +107,8 @@ const LoginPanelStyled = styled.div`
         }
       }
       h2 {
-        font-size: 16px;
+        font-size: 20px;
         color: white;
-      }
-    }
-    .modal-content-body {
-      flex: 1;
-      padding: 25px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      h3 {
-        margin-bottom: 40px;
-      }
-      input {
-        width: 100%;
-        height: 40px;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 10px 10px 0px 0px;
-      }
-      button {
-        width: 100%;
-        height: 40px;
-        padding: 5px 10px;
-        border-radius: 0px 0px 10px 10px;
-        border: none;
-        cursor: pointer;
-        background-color: #ffffff37;
-        border-top: 1px solid lightgrey;
-        color: white;
-        font-size: 16px;
-        :hover {
-          background-color: #ffffff60;
-          transition: all 400ms ease;
-        }
       }
     }
   }

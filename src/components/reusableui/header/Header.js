@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import GlobalContext from "../../context/GlobalContext";
 import Navbar from "./navbar/Navbar";
+import { useContext } from "react";
 export default function Header() {
   return (
     <HeaderStyled>

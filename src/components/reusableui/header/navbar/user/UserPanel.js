@@ -3,32 +3,37 @@ import styled from "styled-components";
 import GlobalContext from "../../../../context/GlobalContext";
 import PillButton from "./PillButton";
 
-export default function UserPanel({ userPillToggle }) {
-  const { username, setUsername, setIsLoginPanel, isLoginPanel } =
-    useContext(GlobalContext);
+export default function UserPanel({
+  userPillToggle,
+  setUserPillAction,
+  logout,
+  setIsLogInModal,
+}) {
+  const { currentUser } = useContext(GlobalContext);
 
-  const openLoginPanel = () => {
-    setIsLoginPanel(!isLoginPanel);
+  const openLogInModal = (action) => {
+    setIsLogInModal(true);
+    setUserPillAction(action);
     userPillToggle();
   };
-  const logout = (event) => {
-    event.preventDefault();
-    setUsername("");
-    userPillToggle();
-  };
+
   return (
     <UserPillExtensionStyled>
-      {username !== "" ? (
+      {currentUser ? (
         <>
-          <p>
-            Bonjour <span>{username}</span>
-          </p>
-          <PillButton onClick={logout} label="Déconnexion" />
+          <p>Bonjour</p>
+          <PillButton label="Déconnexion" onClick={logout} />
         </>
       ) : (
         <>
-          <PillButton onClick={openLoginPanel} label="Connexion" />
-          <PillButton onClick={openLoginPanel} label="Inscription" />
+          <PillButton
+            onClick={() => openLogInModal("signIn")}
+            label="Connexion"
+          />
+          <PillButton
+            onClick={() => openLogInModal("signUp")}
+            label="Inscription"
+          />
         </>
       )}
     </UserPillExtensionStyled>

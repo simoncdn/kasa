@@ -19,7 +19,7 @@ const ToastContainerStyled = styled(ToastContainer)`
     border: 1px solid rgba(255, 255, 255, 0.34);
     backdrop-filter: blur(9.1px);
     -webkit-backdrop-filter: blur(9.1px);
-    font-size: 20px;
+    font-size: 14px;
   }
   .Toastify__progress-bar-theme--dark {
     background-color: #ff6060;
@@ -29,6 +29,7 @@ const ToastContainerStyled = styled(ToastContainer)`
       margin-right: 14px;
       margin-left: 5px;
       font-size: 20px;
+      color: Yellow;
     }
     div {
       line-height: 1.3em;
