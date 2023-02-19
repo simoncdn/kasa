@@ -1,24 +1,14 @@
-import React, { useContext, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import styled from "styled-components";
-import GlobalContext from "../../../context/GlobalContext";
-import ConnexionPanel from "./user/LoginPanel";
-import UserPill from "./user/UserPill";
-import UserPillExtension from "./user/UserPanel";
 
 import "react-toastify/dist/ReactToastify.css";
-import { ImHome } from "react-icons/im";
+
 import Toast from "../../Toast";
 import User from "./user/User";
 
 export default function Navbar() {
   const location = useLocation();
-  const [isUserPill, setIsUserPill] = useState(false);
-  const { setIsConnexionPanel, isConnexionPanel, setUsername, username } =
-    useContext(GlobalContext);
-
   const arrNav = [
     {
       label: "Accueil",
@@ -32,28 +22,6 @@ export default function Navbar() {
     },
   ];
 
-  const userPillToggle = () => {
-    setIsUserPill(!isUserPill);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setUsername(username);
-    setIsConnexionPanel(!isConnexionPanel);
-    if (username) {
-      toast.info(`Bienvenue ${username}`, {
-        theme: "dark",
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        icon: <ImHome />,
-      });
-    }
-  };
   return (
     <NavbarStyled className="navbar">
       {arrNav.map((item, index) => {

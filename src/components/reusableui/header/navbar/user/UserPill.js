@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { HiUserCircle } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import styled from "styled-components";
+import GlobalContext from "../../../../context/GlobalContext";
 
 export default function UserPill({ onClick, className }) {
+  const { currentUser } = useContext(GlobalContext);
+
+  const [userImg, setUserImg] = useState("");
+
+  useEffect(() => {
+    if (!currentUser) {
+      setUserImg(null);
+    } else {
+      setUserImg(currentUser.photoURL);
+    }
+  }, [currentUser]);
+
   return (
     <UserPillStyled onClick={onClick} className={className}>
       <RxHamburgerMenu className="icon" />
-      <HiUserCircle className="icon" />
+
+      {userImg !== null ? (
+        <img src={userImg} alt="profile" />
+      ) : (
+        <HiUserCircle className="icon" />
+      )}
     </UserPillStyled>
   );
 }
@@ -37,6 +55,12 @@ const UserPillStyled = styled.button`
       width: 20px;
       height: 20px;
     }
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 2px;
   }
   &.active {
     background-color: white;
