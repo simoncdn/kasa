@@ -59,7 +59,7 @@ const LoginPanelStyled = styled.div`
   }
   .modal-content {
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
@@ -114,7 +114,7 @@ const LoginPanelStyled = styled.div`
   }
   @media screen and (max-width: 768px) {
     .modal-content {
-      top: 30%;
+      top: 60%;
       width: 340px;
       .modal-content-title h2 {
         font-size: 14px;
@@ -128,5 +128,8 @@ const LoginPanelStyled = styled.div`
     }
   }
   @media screen and (max-width: 490px) {
+    .modal-content {
+      width: 300px;
+    }
   }
 `;

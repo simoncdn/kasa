@@ -79,4 +79,28 @@ const SignUpSocialMediaStyled = styled.div`
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    .social-media {
+      .logo {
+        margin-left: 15px;
+        width: 30px;
+        height: 30px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+  @media screen and (max-width: 490px) {
+    .social-media {
+      .logo {
+        margin-left: 15px;
+        width: 20px;
+        height: 20px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
 `;
