@@ -22,7 +22,7 @@ const HeaderStyled = styled.div`
   justify-content: space-between;
   padding: 25px 50px;
   border-bottom: 2px solid #ffffff32;
-  z-index: 20;
+  z-index: 200;
   .logo-container {
     display: flex;
     align-items: center;
