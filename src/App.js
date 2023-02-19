@@ -11,18 +11,19 @@ import lodgingData from "./data/lodging.json";
 function App() {
   const [data, setData] = useState(lodgingData);
   const [isLiked, setIsLiked] = useState([]);
-  const [isLoginPanel, setIsLoginPanel] = useState(false);
-  const [username, setUsername] = useState("");
+  const [currentUser, setCurrentUser] = useState("");
   const [filterIndex, setFilterIndex] = useState(1);
+
   const globalContextValue = {
     data,
     setData,
+
     isLiked,
     setIsLiked,
-    isLoginPanel,
-    setIsLoginPanel,
-    username,
-    setUsername,
+
+    currentUser,
+    setCurrentUser,
+
     filterIndex,
     setFilterIndex,
   };
